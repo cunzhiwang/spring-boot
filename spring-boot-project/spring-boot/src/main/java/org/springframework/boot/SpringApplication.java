@@ -288,6 +288,8 @@ public class SpringApplication {
 		stopWatch.start();
 		ConfigurableApplicationContext context = null;
 		Collection<SpringBootExceptionReporter> exceptionReporters = new ArrayList<>();
+		// java.awt.headless 是 Java 中的一个系统属性（system property），
+		// 用于指定 Java 程序在无图形化界面（GUI）环境下的运行模式，称为 “Headless 模式”。
 		configureHeadlessProperty();
 		SpringApplicationRunListeners listeners = getRunListeners(args);
 		listeners.starting();
